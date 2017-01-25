@@ -12,21 +12,27 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   #end
 
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
     assert_select "title", "BetsBolão sites de apostas do brasileirão"
   end
 
   test "should get ajuda" do
-    get static_pages_ajuda_url
+    get ajuda_path
     assert_response :success
     assert_select "title", "Ajuda | BetsBolão sites de apostas do brasileirão"
   end
 
-  test "should get sobre" do
-  	get static_pages_sobre_url
+  test "should get regra" do
+  	get regra_path
   	assert_response :success
-  	assert_select "title", "Sobre | BetsBolão sites de apostas do brasileirão"
+  	assert_select "title", "Regras | BetsBolão sites de apostas do brasileirão"
+  end
+
+  test "should get contato" do
+    get contato_path
+    assert_response :success
+    assert_select "title", "Contatos | BetsBolão sites de apostas do brasileirão"
   end
 
 end

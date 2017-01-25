@@ -5,7 +5,11 @@ class StaticPagesController < ApplicationController
   def ajuda
   end
 
-  def sobre
-  	
+  def regra
+
+  end
+
+  def contato
+
   end
 end
